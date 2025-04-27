@@ -1,0 +1,635 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #c3b9ef;
+  font-size: clamp(12px, 1.2vw, 18px); /* base font responsive */
+}
+header {
+  background-color: transparent;
+}
+
+.navbar {
+  display: flex;
+  background-color: #813dfc;
+  padding: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: clamp(35px, 4vw, 60px);
+  padding: 5px;
+  height: auto;
+  border-radius: 50%;
+  background-color: #FFF;
+  -webkit-animation: bounce-in-bck 1.1s both;
+	 animation: bounce-in-bck 1.1s both;
+}
+
+#search {
+  width: 70%;
+  padding: 10px 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: clamp(12px, 1.3vw, 16px);
+  -webkit-animation: bounce-in-left 1.1s both;
+	        animation: bounce-in-left 1.1s both;
+}
+
+
+#imag {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  background-image: url('bg.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#imag h1,h3{
+    -webkit-animation: text-shadow-pop-tr 0.6s both;
+	 animation: text-shadow-pop-tr 0.6s both;
+}
+
+#imag button {
+  padding: 8px 15px;
+  background-color: #813dfca8;
+  border: solid 2px #3de3fc;
+  border-top: transparent;
+  border-bottom: transparent;
+  color: white;
+  border-radius: 5px;
+  font-size: clamp(14px, 1.4vw, 18px);
+}
+ #categh{
+   background-color: #813dfc;
+   border-radius: 20px;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+.category-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+  gap: 15px;
+}
+
+.category {
+  flex: 0 0 auto;
+  width: 30%;
+  height: 200px;
+  scroll-snap-align: start;
+  text-align: center;
+  cursor: pointer;
+}
+
+.category img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #813dfc;
+  border-top: transparent;
+  border-bottom: transparent;
+  transition: transform 0.3s;
+  background-color: #813dfc;
+}
+
+.category img:hover {
+  transform: scale(1.05);
+}
+
+.category p {
+  margin-top: 5px;
+  font-size: clamp(12px, 1.2vw, 16px);
+  color: #fff;
+}
+
+.heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #fff;
+  background-color: #813dfc;
+  border-radius: 20px;
+  font-size: clamp(16px, 1.6vw, 22px);
+}
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 3px solid #3de3fc;
+      border-top: transparent;
+      border-bottom: transparent;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      padding: 5px;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-card:hover {
+      transform: scale(1.01);
+    }
+
+    .product-card img {
+      width: 90%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-info {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .product-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-desc {
+      font-size: 14px;
+      color: #555;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .product-price {
+      color: red;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .btn {
+      background-color: #813dfc;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #6b29d2;
+    }
+    
+    .product-info input[type="number"] {
+  width: 60px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-align: center;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.product-info input[type="number"]:focus {
+  border-color: #813dfc;
+  box-shadow: 0 0 5px #813dfc66;
+}
+#happy-customers {
+  padding: 20px;
+  text-align: center;
+  background-color: #e2dcfa;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+#happy-customers h2 {
+  margin-bottom: 20px;
+  color: #813dfc;
+}
+
+.customer-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.happy-customers {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #813dfc;
+  color: #fff;
+  border-radius: 20px;
+  margin: 30px 10px;
+}
+
+.happy-customers h2 {
+  font-size: clamp(20px, 2.5vw, 32px);
+  margin-bottom: 20px;
+}
+
+.customer-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.customer-stats div {
+  background-color: #ffffff1a;
+  padding: 20px;
+  border-radius: 15px;
+  width: 150px;
+}
+
+.customer-stats h3 {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #3de3fc;
+}
+
+.customer-stats p {
+  font-size: clamp(12px, 1.5vw, 18px);
+  margin-top: 8px;
+}
+
+
+
+
+
+
+
+.luxury-footer {
+  background-color: #813dfc;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: #dccafb;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #3de3fc;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-4-25 12:51:53
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-in-left {
+  0% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateX(-68px);
+            transform: translateX(-68px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateX(-28px);
+            transform: translateX(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-in-left {
+  0% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateX(-68px);
+            transform: translateX(-68px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateX(-28px);
+            transform: translateX(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+/* text anim..................... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* logo animation-timing-function */
+/* ----------------------------------------------
+ * Generated by Animista on 2025-4-25 13:20:35
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-in-bck {
+  0% {
+    -webkit-transform: scale(7);
+            transform: scale(7);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: scale(1.24);
+            transform: scale(1.24);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  89% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-in-bck {
+  0% {
+    -webkit-transform: scale(7);
+            transform: scale(7);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: scale(1.24);
+            transform: scale(1.24);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  89% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #search {
+    width: 60%;
+    font-size: clamp(10px, 3vw, 14px);
+  }
+
+  .logo {
+    width: clamp(30px, 6vw, 50px);
+  }
+}
+
+@media (min-width: 1400px) {
+  #imag {
+    height: 50vh;
+    padding: 20px;
+  }
+
+  .navbar {
+    padding: 12px;
+  }
+
+  #search {
+    width: 40%;
+    font-size: clamp(14px, 1.4vw, 18px);
+  }
+  
+}
+

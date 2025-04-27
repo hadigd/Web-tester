@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Delicious homemade food. Fast delivery. Explore our menu of fresh pizzas, burgers, and drinks.">
+  <meta name="keywords" content="restaurant, food delivery, pizza, burger, fast food">
+  <meta name="author" content="HAMEED 2 Restaurant">
+  <meta name="theme-color" content="#813dfc">
+  <title>Home | HAMEED 2 Restaurant and Bakery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://Hameed2.com/">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <img src="logom.png" alt="HAMEED 2 Restaurant and Bakery Logo" class="logo">
+    <h2 style="color:#fff;" data-aos="fade-right">HAMEED 2</h2>
+    
+    <input type="text" id="search" placeholder="Search...">
+  </div>
+  <div id="imag">
+    <h1>WELCOME TO HAMEED2</h1>
+    <h3>Restaurant | Bakery</h3>
+    <button onclick="window.location.href='about.html'">About</button>
+  </div>
+</header>
+
+<main>
+  <section class="heading" data-aos="zoom-in" >
+    <h2>About</h2>
+    <p>Serving delicious meals made with love. Order online or dine in today!</p>
+  </section>
+
+  <section data-aos="zoom-in">
+    <h1 id="categh" data-aos="fadeIn" >Category</h1>
+    <div class="category-slider"  >
+      <div class="category" onclick="window.location.href='#fastfood'">
+        <img src="burger.png" alt="Cakes Category">
+        <p>FAST FOOD</p>
+      </div>
+      <div class="category" onclick="window.location.href='#sweets'">
+        <img src="cake.png" alt="Cake Category">
+        <p>SWEETS</p>
+      </div>
+      <div class="category" onclick="window.location.href='#meals'">
+        <img src="biryani.png" alt="Biryani Category">
+        <p>MEALS</p>
+      </div>
+      <div class="category" onclick="window.location.href='#drinks'">
+        <img src="drinks.png" alt="Pizza Category">
+        <p>DRINKS</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <!--////////// fastfood grid/////// -->
+    <div class="product-grid" id="fastfood">
+      <div class="product-card" onclick="viewProduct('Pizza', 'Short description of product.', 'Rs. 149', 'pizza.png')">
+        <img src="pizza.png" alt="Pizza">
+        <div class="product-info">
+          <div class="product-title">Pizza</div>
+          <div class="product-desc">This is a short description of pizza.</div>
+          <div class="product-price">Rs. 999</div>
+          <input type="number" id="qty1" min="1" value="1" style="width: 60px; margin: 5px 0;">
+          <button class="btn" onclick="orderOnWhatsApp('Product 1', 'Rs. 999', 'pizza.png', document.getElementById('qty1').value)">Bay Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="viewProduct('Product 2', 'Short description of product 2.', 'Rs. 1499', 'burger.png')">
+        <img src="burger.png" alt="Pizza">
+        <div class="product-info">
+          <div class="product-title">Product 1</div>
+          <div class="product-desc">This is a short description of product 1.</div>
+          <div class="product-price">Rs. 999</div>
+          <input type="number" id="qty1" min="1" value="1" style="width: 60px; margin: 5px 0;">
+          <button class="btn" onclick="orderOnWhatsApp('Product 1', 'Rs. 999', 'pizza.png', document.getElementById('qty1').value)">Bay Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!--////////// sweets grid/////// -->
+    <div class="product-grid" id="sweets">
+      <div class="product-card" onclick="viewProduct('Product 2', 'Short description of product 2.', 'Rs. 1499', 'cake.png')">
+        <img src="cake.png" alt="Pizza">
+        <div class="product-info">
+          <div class="product-title">Product 1</div>
+          <div class="product-desc">This is a short description of product 1.</div>
+          <div class="product-price">Rs. 999</div>
+          <input type="number" id="qty1" min="1" value="1" style="width: 60px; margin: 5px 0;">
+          <button class="btn" onclick="orderOnWhatsApp('Product 1', 'Rs. 999', 'pizza.png', document.getElementById('qty1').value)">Bay Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!--////////// meals grid/////// -->
+    <div class="product-grid" id="meals">
+      <div class="product-card" onclick="viewProduct('Product 2', 'Short description of product 2.', 'Rs. 1499', 'biryani.png')">
+        <img src="biryani.png" alt="Pizza">
+        <div class="product-info">
+          <div class="product-title">Product 1</div>
+          <div class="product-desc">This is a short description of product 1.</div>
+          <div class="product-price">Rs. 999</div>
+          <input type="number" id="qty1" min="1" value="1" style="width: 60px; margin: 5px 0;">
+          <button class="btn" onclick="orderOnWhatsApp('Product 1', 'Rs. 999', 'pizza.png', document.getElementById('qty1').value)">Bay Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!--////////// drinks grid/////// -->
+    <div class="product-grid" id="drinks">
+      <div class="product-card" onclick="viewProduct('dew', 'Short description of product 2.', 'Rs. 1499', 'drinks.png')">
+        <img src="drinks.png" alt="Pizza">
+        <div class="product-info">
+          <div class="product-title">dew</div>
+          <div class="product-desc">This is a short description of product 1.</div>
+          <div class="product-price">Rs. 999</div>
+          <input type="number" id="qty1" min="1" value="1" style="width: 60px; margin: 5px 0;">
+          <button class="btn" onclick="orderOnWhatsApp('Product 1', 'Rs. 999', 'pizza.png', document.getElementById('qty1').value)">Bay Now</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+    
+    
+    
+    
+    <section class="happy-customers" data-aos="fade-up">
+  <h2>OUR HAPPY CUSTOMER's</h2>
+  <div class="customer-stats">
+    <div>
+      <h3>5000+</h3>
+      <p>Orders Delivered</p>
+    </div>
+    <div>
+      <h3>3500+</h3>
+      <p>Happy Customers</p>
+    </div>
+    <div>
+      <h3>1500+</h3>
+      <p>Positive Reviews</p>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+
+
+
+
+<footer class="luxury-footer">
+  <div class="footer-content">
+    <img src="logom.png" alt="HAMEED 2 Logo" class="footer-logo">
+    <p>Delivering love and taste in every bite!</p>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="#fastfood">Fast Food</a>
+      <a href="#sweets">Sweets</a>
+      <a href="#meals">Meals</a>
+      <a href="#drinks">Drinks</a>
+    </div>
+    <p class="copyright">
+      &copy; 2025 HAMEED 2 Restaurant. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true, // animation runs only once
+  });
+</script>
+<script>// Add search functionality
+const searchInput = document.getElementById('search');
+
+searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.trim().toLowerCase();
+    const products = document.querySelectorAll('.product-card');
+
+    products.forEach(product => {
+        const title = product.querySelector('.product-title').textContent.toLowerCase();
+        const description = product.querySelector('.product-desc').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+});</script>
+<script src="scriptm.js"></script>
+</body>
+</html>
