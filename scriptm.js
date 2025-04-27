@@ -23,7 +23,8 @@ function orderOnWhatsApp(name, price, image, quantity, desc) {
   const message = `Hello! I want to order:\n\n*Product:* ${name}\n*Price:* ${price}\n*Quantity:* ${quantity}\n*Description:* ${desc}\n*Image:* ${window.location.origin}/${image}`;
   const encodedMessage = encodeURIComponent(message);
   const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-  alert("Note.......                       chat with our team what exaitly you want ");
+    alert("Note⚠️..                                                            ..chat with our team what exaitly you want ");
+  
   window.open(waUrl, "_blank");
 }
 
